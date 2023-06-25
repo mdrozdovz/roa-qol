@@ -2074,6 +2074,12 @@
                     return result;
                 },
 
+                miscellaneous() {
+                    $('#areaContent').style.height = '440px';
+                    $('#chatMessageListWrapper').style.height = '510px';
+                    setTimeout(() => $('#close_general_notification').click(), 5000);
+                }
+
                 startup() {
                     return {
                         'Initiation IndexedDB ..': fn.__.setupIndexedDB,
@@ -2086,6 +2092,7 @@
                         'Loading settings ..'    : fn.__.loadSettings,
                         'Starting loops ..'      : fn.__.setupLoops,
                         'Loading house info ..'  : fn.__.loadHouseInfo,
+                        'Misc'                   : fn.__.miscellaneous,
                     };
                 },
 
@@ -2693,6 +2700,12 @@ You can buy ${computed.can_buy} more crystals for <span class="gold">${computed.
                             jumpQuestMob(1);
                         });
                     }
+                }
+
+                miscellaneous() {
+                    $('#areaContent').style.height = '440px';
+                    $('#chatMessageListWrapper').style.height = '510px';
+                    setTimeout(() => $('#close_general_notification').click(), 5000);
                 }
             },
         };
